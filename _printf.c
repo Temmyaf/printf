@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 	int count = 0;
 	
-	convert list[] = {
+	conver_t list[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
