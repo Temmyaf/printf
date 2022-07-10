@@ -7,7 +7,7 @@
 int _putchar(char  c);
 void _puts(char *str);
 int _write_char(char c);
-int _printf(char *, ...);
-char* convert(unsigned int, int);
+int _printf(char *format, ...);
+char* convert(unsigned int num, int base);
 
 #endif
