@@ -6,7 +6,7 @@
  * @arg: A list containing all the argumentents passed to the program.
  * Return: A total count of the characters printed.
  */
-int loop_count(char *format, convert list[], va_list arg)
+int loop_count(char *format, conver_t list[], va_list arg)
 {
 	int i, j, r_val;
 	int printed_chars = 0;
