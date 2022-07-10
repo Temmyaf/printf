@@ -3,11 +3,27 @@
 
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 int _putchar(char  c);
 void _puts(char *str);
 int _write_char(char c);
 int _printf(char *format, ...);
 char* convert(unsigned int num, int base);
+int loop_count(char *format, convert list[], va_list arg);
+
+
+/**
+* struct convert - defines a structure for symbols and functions
+*
+* @sym: The operator
+* @f: The function associated
+*/
+struct convert
+{
+	char *sym;
+	int (*f)(va_list);
+};
+typedef struct convert convert;
 
 #endif

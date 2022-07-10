@@ -7,9 +7,15 @@
  */
 int _printf(const char *format, ...)
 {
-	char *string;
 	int count = 0;
-
+	
+	convert list[] = {
+		{"c", print_char},
+		{"s", print_string},
+		{"%", print_percent},
+		{"d", print_integer},
+		{"i", print_integer},
+	}
 	va_list arg;
 
 	if (format == NULL)
@@ -17,9 +23,7 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 
-	string = format;
-	count = loop_count(arg, string);
-
+	count = loop_count(format, list, arg);
 	va_end(arg);
 	return (count);
 }
