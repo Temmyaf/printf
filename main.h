@@ -9,13 +9,12 @@ int _putchar(char  c);
 void _puts(char *str);
 int _write_char(char c);
 int _printf(char *format, ...);
-char* convert(unsigned int num, int base);
+char *convert(unsigned int num, int base);
 int loop_count(char *format, conver_t list[], va_list arg);
 
 
 /**
 * struct convert - defines a structure for symbols and functions
-*
 * @sym: The operator
 * @f: The function associated
 */
@@ -24,6 +23,6 @@ struct convert
 	char *sym;
 	int (*f)(va_list);
 };
-typedef struct convert convert;
+typedef struct convert conver_t;
 
 #endif
