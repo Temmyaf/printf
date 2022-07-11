@@ -13,7 +13,8 @@ int _write_char(char c);
 int _printf(char *format, ...);
 char *convert(unsigned int num, int base);
 int loop_count(char *format, conver_t list[], va_list arg);
-
+int print_num(va_list args);
+int print_unsigned_num(unsigned int n)
 
 /**
 * struct convert - defines a structure for symbols and functions
