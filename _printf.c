@@ -27,26 +27,3 @@ int _printf(const char *format, ...)
 	va_end(arg);
 	return (count);
 }
-
-/**
- * convert - convert numbers
- * @num: number to transform
- * @base: base to transform num
- * Return: number into char pointer
- */
-char *convert(unsigned int num, int base)
-{
-	static const char Representation[] = "0123456789ABCDEF";
-	static char buffer[50];
-	char *ptr;
-
-	prt = &buffer[49];
-	*ptr = '\0';
-
-	do {
-		*--ptr = Representation[num % base];
-		num /= base;
-	} while (num != 0);
-
-	return (ptr);
-}
