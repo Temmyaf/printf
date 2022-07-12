@@ -8,9 +8,9 @@
  */
 int _printf(const char *format, ...)
 {
-	int print_char;
+	int count;
 
-	conver_t list[] = 
+	conver_t f_list[] = 
 	{
 		{"c", print_char},
 		{"s", print_string},
@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 
-	print_char = loop_count(format, list, arg);
+	count = loop_count(format, f_list, arg);
 	va_end(arg);
-	return (print_char);
+	return (count);
 }

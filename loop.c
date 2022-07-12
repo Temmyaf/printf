@@ -6,7 +6,7 @@
  * @arg: A list containing all the argumentents passed to the program.
  * Return: A total count of the characters printed.
  */
-int loop_count(char *format, conver_t list[], va_list arg)
+int loop_count(char *format, conver_t f_ list[], va_list arg)
 {
 	int i, j, r_val;
 	int printed_chars = 0;
@@ -15,18 +15,18 @@ int loop_count(char *format, conver_t list[], va_list arg)
 	{
 		if (format[i] == '%')
 		{
-			for (j = 0; list[j].sym != NULL; j++)
+			for (j = 0; f_list[j].sym != NULL; j++)
 			{
-				if (format[i + 1] == list[j].sym[0])
+				if (format[i + 1] == f_list[j].sym[0])
 				{
-					r_val = list[j].f(arg);
+					r_val = f_list[j].f(arg);
 					if (r_val == -1)
 						return (-1);
 					printed_chars += r_val;
 					break;
 				}
 			}
-			if (list[j].sym == NULL && format[i + 1] != ' ')
+			if (f_list[j].sym == NULL && format[i + 1] != ' ')
 			{
 				if (format[i + 1] != '\0')
 				{
