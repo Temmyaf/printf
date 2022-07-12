@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - Receives the main string and all the necessary parameters to
  * print a formated string
@@ -7,8 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int count = 0;
-	
+	int count;
 	conver_t list[] = {
 		{"c", print_char},
 		{"s", print_string},
