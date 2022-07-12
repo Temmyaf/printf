@@ -19,7 +19,7 @@ struct convert
 typedef struct convert conver_t;
 
 int _putchar(char  c);
-int _printf(char *format, ...);
+int _printf(const char *format, ...);
 void _puts(char *str);
 int _strlen(char *str);
 int _write_char(char c);
