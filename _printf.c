@@ -1,20 +1,28 @@
 #include "main.h"
+
 /**
  * _printf - Receives the main string and all the necessary parameters to
  * print a formated string
- * @format: A string countaining all the desired characters
+ * @format: A string containing all the desired characters
  * Return: A total count of the characters printed
  */
 int _printf(const char *format, ...)
 {
-	int count = 0;
-	
-	conver_t list[] = {
+	int print_char;
+	conver_t f_list[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
 		{"d", print_integer},
 		{"i", print_integer},
+		{"b", print_binary},
+		{"r", print_reversed},
+		{"R", rot13},
+		{"u", unsigned_integer},
+		{"o", print_octal},
+		{"x", print_hex},
+		{"X", print_heX},
+		{NULL, NULL}
 	};
 	va_list arg;
 
@@ -23,7 +31,7 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 
-	count = loop_count(format, list, arg);
+	print_char = loop_count(format, f_list, arg);
 	va_end(arg);
-	return (count);
+	return (print_char);
 }
