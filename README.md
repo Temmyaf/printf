@@ -8,7 +8,7 @@ _printf is an implementation of the C programming function, printf.
   
   ## Converstion specifiers
     The available conversion specifiers are
-    + %c: Prints a single character.
++ %c: Prints a single character.
 + %s: Prints a string of characters.
 + %d: Prints integers.
 + %i: Prints integers.
