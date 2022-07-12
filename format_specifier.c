@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_char - Prints character
  * @list: list of arguments
@@ -49,7 +48,7 @@ int print_integer(va_list list)
 {
 	int num_length;
 
-	num_length = print_num(list);
+	num_length = print_number(list);
 	return (num_length);
 }
 
@@ -65,9 +64,9 @@ int unsigned_integer(va_list list)
 	num = va_arg(list, unsigned int);
 
 	if (num == 0)
-		return (print_unsigned_num(num));
+		return (print_unsgined_number(num));
 
 	if (num < 1)
 		return (-1);
-	return (print_unsigned_num(num));
+	return (print_unsgined_number(num));
 }
